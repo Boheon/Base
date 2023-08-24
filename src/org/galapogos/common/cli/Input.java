@@ -12,8 +12,8 @@ public class Input {
     }
 
     public static String read(String title, String defaultValue){
-        String answer = sc.next();
         System.out.printf("%s(%s)", title, defaultValue);
+        String answer = sc.next();
 
         return answer.isEmpty() ? defaultValue : answer;
 
@@ -22,6 +22,7 @@ public class Input {
     public static int readInt(String title) {
         System.out.print(title);
         int answer = sc.nextInt();
+        sc.nextLine();//엔터 제거를 위해
         return answer;
     }
 

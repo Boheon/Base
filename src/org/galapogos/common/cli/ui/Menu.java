@@ -21,7 +21,7 @@ public class Menu {
 
     public void print() {
         for (int i = 0; i < menuItemList.size(); i++) {
-            System.out.print((i + 1) + "]" + menuItemList.get(i).getTitle() + " ");
+            System.out.printf("%d]%s", (i+1), menuItemList.get(i).getTitle());
         }
         System.out.println();
     }
