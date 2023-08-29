@@ -1,5 +1,6 @@
 package org.galapogos.common.cli;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Input {
@@ -39,5 +40,15 @@ public class Input {
 
     public static boolean confirm(String title){
         return confirm(title, true);
+    }
+
+    public static <T> T select(String title, List<T> list){
+        for(int i = 0; i < list.size(); i++){
+            T el = list.get(i);
+            System.out.printf("%d) %s\n", (i+1), el);
+        }
+
+        int sel = readInt(title);
+        return list.get(sel-1);
     }
 }
